@@ -12,7 +12,7 @@ import app from './reducers';
 import { fetchMessage } from './actions';
 
 const createStoreWithMiddleware = applyMiddleware(
-  thunkMiddleware // lets us dispatch() functions
+  thunkMiddleware // lets us dispatch() from actions
 )(createStore);
 const store = createStoreWithMiddleware(app);
 
