@@ -5,9 +5,4 @@ const Page = (props) => {
   return <p className="page">{props.params.pageId} {props.message}</p>
 }
 
-function select(state) {
-  return {
-    message: state.message
-  }
-}
-export default connect(select)(Page);
+export default connect(state => ({ message: state.message }))(Page);

@@ -16,16 +16,15 @@ const createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 const store = createStoreWithMiddleware(app);
 
-function onEnterPage(pageId) {
-  store.dispatch(fetchMessage(pageId));
+function onEnterPage(state) {
+  store.dispatch(fetchMessage(state.params.pageId));
 }
 
 render((
   <Provider store={store}>
     <Router history={createBrowserHistory()}>
       <Route path="/" component={App}>
-        <Route path=":pageId" component={Page}
-               onEnter={state => onEnterPage(state.params.pageId)} />
+        <Route path=":pageId" component={Page} onEnter={onEnterPage} />
       </Route>
     </Router>
   </Provider>
