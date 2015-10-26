@@ -1,0 +1,28 @@
+{
+  "name": "routerexp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-loader": "^5.3.2",
+    "browser-sync": "^2.9.11",
+    "connect-history-api-fallback": "^1.1.0",
+    "gulp": "^3.9.0",
+    "history": "^1.12.6",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0-rc3",
+    "redux": "^3.0.4",
+    "redux-thunk": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-stream": "^2.1.1"
+  }
+}
