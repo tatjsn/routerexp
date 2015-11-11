@@ -7,9 +7,9 @@ export function fetchMessage(pageId) {
   }
 }
 
-export function receiveMessage(message) {
+export function receiveMessage(payload) {
   return {
     type: RECEIVE_MESSAGE,
-    message: message
+    payload: payload
   }
 }

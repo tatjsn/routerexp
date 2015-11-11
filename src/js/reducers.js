@@ -4,7 +4,7 @@ import { RECEIVE_MESSAGE } from './actions';
 function message(state = {}, action) {
   switch (action.type) {
     case RECEIVE_MESSAGE:
-      return Object.assign({}, state, action.message);
+      return Object.assign({}, state, action.payload);
     default:
       return state;
   }
