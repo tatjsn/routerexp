@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { RECEIVE_MESSAGE } from './actions';
 
-function message(state = 'Init', action) {
+function message(state = {}, action) {
   switch (action.type) {
     case RECEIVE_MESSAGE:
-      return action.message;
+      return Object.assign({}, state, action.message);
     default:
       return state;
   }

@@ -16,8 +16,8 @@ const createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 const store = createStoreWithMiddleware(app);
 
-function onEnterPage(state) {
-  store.dispatch(fetchMessage(state.params.pageId));
+function onEnterPage(nextState) {
+  store.dispatch(fetchMessage(nextState.params.pageId));
 }
 
 render((
